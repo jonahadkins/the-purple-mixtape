@@ -11,3 +11,11 @@
   **3. Back 2 School** [ [Preview Track](http://jonahadkins.github.io/noland-trail-gl/back2school.html) ]  
   Samples: [Nystrom North America; 1960?](https://www.instagram.com/p/9CBXvmiBQi/)  
   Credits: © [Mapbox](https://www.mapbox.com/about/maps/), © [OpenStreetMap](http://www.openstreetmap.org/copyright), © [Natural Earth Data](http://www.naturalearthdata.com), [ETOPO](https://github.com/jonahadkins/five-minute-topo)  
+  
+
+  
+
+  
+
+  
+###### Jonah is repped by [Paid Mappers](http://paidmappers.github.io/home/) Entertainment - [Contact P.M.E.](mailto:jonahadkins@gmail.com) To Book For Parties, Interviews, & Apperances
