@@ -1,0 +1,1030 @@
+{
+    "version": 8,
+    "name": "Back-2-School",
+    "metadata": {
+        "mapbox:groups": {
+            "1449282935008.8745": {
+                "name": "Elevation",
+                "collapsed": true
+            },
+            "1449283786574.4106": {
+                "name": "Population",
+                "collapsed": true
+            },
+            "1449284945736.223": {
+                "name": "Boundaries",
+                "collapsed": true
+            },
+            "1449367293974.532": {
+                "name": "Water",
+                "collapsed": true
+            }
+        }
+    },
+    "center": [
+        -90.81993431304922,
+        27.187474941854177
+    ],
+    "zoom": 4,
+    "bearing": 0,
+    "pitch": 0,
+    "sources": {
+        "mapbox://jonahadkins.1v29b139": {
+            "url": "mapbox://jonahadkins.1v29b139",
+            "type": "vector"
+        },
+        "mapbox://mapbox.mapbox-streets-v6": {
+            "url": "mapbox://mapbox.mapbox-streets-v6",
+            "type": "vector"
+        },
+        "mapbox://jonahadkins.448b4f6g": {
+            "url": "mapbox://jonahadkins.448b4f6g",
+            "type": "raster"
+        },
+        "mapbox://jonahadkins.33rh5st0": {
+            "url": "mapbox://jonahadkins.33rh5st0",
+            "type": "vector"
+        },
+        "mapbox://jonahadkins.cvsuibiq": {
+            "url": "mapbox://jonahadkins.cvsuibiq",
+            "type": "vector"
+        },
+        "mapbox://jonahadkins.2lyo38jl": {
+            "url": "mapbox://jonahadkins.2lyo38jl",
+            "type": "vector"
+        },
+        "mapbox://jonahadkins.1ta5obyg": {
+            "url": "mapbox://jonahadkins.1ta5obyg",
+            "type": "vector"
+        },
+        "mapbox://jonahadkins.byd7fzt0": {
+            "url": "mapbox://jonahadkins.byd7fzt0",
+            "type": "vector"
+        }
+    },
+    "sprite": "mapbox://sprites/jonahadkins/cihtuoe6g00d4npm4ba8omzgd",
+    "glyphs": "mapbox://fonts/jonahadkins/{fontstack}/{range}.pbf",
+    "layers": [
+        {
+            "id": "background",
+            "type": "background",
+            "paint": {
+                "background-color": "#006937"
+            },
+            "interactive": true,
+            "layout": {
+                "visibility": "none"
+            }
+        },
+        {
+            "type": "raster",
+            "paint": {
+                "raster-contrast": 0.8,
+                "raster-brightness-max": 0.4,
+                "raster-opacity": 1
+            },
+            "layout": {
+                "visibility": "visible"
+            },
+            "id": "Shaded-Relief",
+            "source": "mapbox://jonahadkins.448b4f6g",
+            "interactive": true
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "visibility": "visible"
+            },
+            "metadata": {
+                "mapbox:group": "1449282935008.8745"
+            },
+            "filter": [
+                "==",
+                "class",
+                "L1"
+            ],
+            "type": "fill",
+            "source": "mapbox://jonahadkins.1v29b139",
+            "id": "Land: 0m - 150m",
+            "paint": {
+                "fill-color": "rgba(75,130,90,1)",
+                "fill-antialias": true,
+                "fill-opacity": 0.8
+            },
+            "source-layer": "etopo_dissolved"
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "visibility": "visible"
+            },
+            "metadata": {
+                "mapbox:group": "1449282935008.8745"
+            },
+            "filter": [
+                "==",
+                "class",
+                "L2"
+            ],
+            "type": "fill",
+            "source": "mapbox://jonahadkins.1v29b139",
+            "id": "Land: 150m - 300m ",
+            "paint": {
+                "fill-color": "rgba(110,160,125,1)",
+                "fill-antialias": true,
+                "fill-opacity": 0.8
+            },
+            "source-layer": "etopo_dissolved"
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "visibility": "visible"
+            },
+            "metadata": {
+                "mapbox:group": "1449282935008.8745"
+            },
+            "filter": [
+                "==",
+                "class",
+                "L3"
+            ],
+            "type": "fill",
+            "source": "mapbox://jonahadkins.1v29b139",
+            "id": "Land: 300m - 600m",
+            "paint": {
+                "fill-color": "#ecc465",
+                "fill-antialias": true,
+                "fill-opacity": 0.8
+            },
+            "source-layer": "etopo_dissolved"
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "visibility": "visible"
+            },
+            "metadata": {
+                "mapbox:group": "1449282935008.8745"
+            },
+            "filter": [
+                "==",
+                "class",
+                "L4"
+            ],
+            "type": "fill",
+            "source": "mapbox://jonahadkins.1v29b139",
+            "id": "Land: 600m - 1500m",
+            "paint": {
+                "fill-color": "rgba(210,130,75,1)",
+                "fill-antialias": true,
+                "fill-opacity": 0.8
+            },
+            "source-layer": "etopo_dissolved"
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "visibility": "visible"
+            },
+            "metadata": {
+                "mapbox:group": "1449282935008.8745"
+            },
+            "filter": [
+                "==",
+                "class",
+                "L5"
+            ],
+            "type": "fill",
+            "source": "mapbox://jonahadkins.1v29b139",
+            "id": "Land: 1500m - 3000m ",
+            "paint": {
+                "fill-color": "rgba(210,90,60,1)",
+                "fill-antialias": true,
+                "fill-opacity": 0.8
+            },
+            "source-layer": "etopo_dissolved"
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "visibility": "visible"
+            },
+            "metadata": {
+                "mapbox:group": "1449282935008.8745"
+            },
+            "filter": [
+                "==",
+                "class",
+                "L6"
+            ],
+            "type": "fill",
+            "source": "mapbox://jonahadkins.1v29b139",
+            "id": "Land: Higher Than 3000m ",
+            "paint": {
+                "fill-color": "rgba(140,80,60,1)",
+                "fill-antialias": true,
+                "fill-opacity": 0.8,
+                "fill-translate": [
+                    0,
+                    0
+                ]
+            },
+            "source-layer": "etopo_dissolved"
+        },
+        {
+            "layout": {
+                "visibility": "none"
+            },
+            "metadata": {
+                "mapbox:group": "1449282935008.8745"
+            },
+            "type": "fill",
+            "source": "mapbox://jonahadkins.2lyo38jl",
+            "id": "ne-50m-glaciated-areas",
+            "paint": {
+                "fill-color": "rgba(252,252,252,1)",
+                "fill-opacity": 0.8,
+                "fill-antialias": true
+            },
+            "source-layer": "ne_50m_glaciated_areas",
+            "interactive": true
+        },
+        {
+            "layout": {
+                "visibility": "visible"
+            },
+            "metadata": {
+                "mapbox:group": "1449367293974.532"
+            },
+            "type": "fill",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "id": "Water: Interiors",
+            "paint": {
+                "fill-color": "#bec8d7",
+                "fill-antialias": true
+            },
+            "source-layer": "water",
+            "interactive": true
+        },
+        {
+            "layout": {},
+            "metadata": {
+                "mapbox:group": "1449367293974.532"
+            },
+            "type": "line",
+            "source": "mapbox://jonahadkins.1ta5obyg",
+            "id": "ne-50m-rivers-lakes",
+            "paint": {
+                "line-color": "#468796",
+                "line-blur": 0
+            },
+            "source-layer": "ne_10m_rivers_lake_centerlines",
+            "interactive": true
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "visibility": "visible"
+            },
+            "metadata": {
+                "mapbox:group": "1449367293974.532"
+            },
+            "filter": [
+                "==",
+                "class",
+                "W3"
+            ],
+            "type": "fill",
+            "source": "mapbox://jonahadkins.1v29b139",
+            "id": "Water: Deeper Than 6000m",
+            "paint": {
+                "fill-color": "rgba(10,75,100,1)",
+                "fill-antialias": true,
+                "fill-opacity": 0.75
+            },
+            "source-layer": "etopo_dissolved"
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "visibility": "visible"
+            },
+            "metadata": {
+                "mapbox:group": "1449367293974.532"
+            },
+            "filter": [
+                "==",
+                "class",
+                "W2"
+            ],
+            "type": "fill",
+            "source": "mapbox://jonahadkins.1v29b139",
+            "id": "Water: 200m - 6000m",
+            "paint": {
+                "fill-color": "rgba(75,175,215,1)",
+                "fill-antialias": true,
+                "fill-opacity": 0.75
+            },
+            "source-layer": "etopo_dissolved"
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "visibility": "visible"
+            },
+            "metadata": {
+                "mapbox:group": "1449367293974.532"
+            },
+            "filter": [
+                "==",
+                "class",
+                "W1"
+            ],
+            "type": "fill",
+            "source": "mapbox://jonahadkins.1v29b139",
+            "id": "Water: 0m - 200m ",
+            "paint": {
+                "fill-color": "rgba(190,200,215,1)",
+                "fill-antialias": true,
+                "fill-opacity": 0.75
+            },
+            "source-layer": "etopo_dissolved"
+        },
+        {
+            "layout": {
+                "text-size": 6,
+                "text-allow-overlap": false,
+                "symbol-avoid-edges": false,
+                "text-ignore-placement": false,
+                "text-transform": "uppercase",
+                "text-font": [
+                    "Clan Offc Pro Bold Italic",
+                    "Arial Unicode MS Regular"
+                ],
+                "symbol-placement": "line",
+                "text-rotation-alignment": "map",
+                "text-anchor": "bottom",
+                "text-keep-upright": true,
+                "text-field": "{name}",
+                "text-letter-spacing": 0.3
+            },
+            "metadata": {
+                "mapbox:group": "1449367293974.532"
+            },
+            "type": "symbol",
+            "source": "mapbox://jonahadkins.1ta5obyg",
+            "id": "ne-50m-rivers-lakes-labels",
+            "paint": {
+                "text-halo-color": "rgba(247,245,245,0.32)",
+                "text-halo-width": 2,
+                "text-halo-blur": 2
+            },
+            "source-layer": "ne_10m_rivers_lake_centerlines",
+            "interactive": true
+        },
+        {
+            "layout": {
+                "text-field": "{name}",
+                "symbol-placement": "point",
+                "text-font": [
+                    "Clan Offc Pro Bold Italic",
+                    "Arial Unicode MS Regular"
+                ],
+                "text-size": 11,
+                "text-letter-spacing": 0.3,
+                "text-transform": "uppercase"
+            },
+            "metadata": {
+                "mapbox:group": "1449367293974.532"
+            },
+            "type": "symbol",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "id": "marine-label",
+            "paint": {
+                "text-color": "rgba(26,27,28,1)",
+                "text-halo-width": 2,
+                "text-halo-color": "#4bafd7",
+                "text-halo-blur": 2
+            },
+            "source-layer": "marine_label",
+            "interactive": true
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "visibility": "visible",
+                "line-cap": "butt",
+                "line-join": "bevel"
+            },
+            "metadata": {
+                "mapbox:group": "1449284945736.223"
+            },
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "admin_level",
+                    3
+                ],
+                [
+                    "==",
+                    "maritime",
+                    0
+                ]
+            ],
+            "type": "line",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "id": "District-Dash ",
+            "paint": {
+                "line-dasharray": [
+                    2,
+                    2
+                ],
+                "line-width": 0.7
+            },
+            "source-layer": "admin"
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "visibility": "visible",
+                "line-cap": "round"
+            },
+            "metadata": {
+                "mapbox:group": "1449284945736.223"
+            },
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "admin_level",
+                    4
+                ],
+                [
+                    "==",
+                    "maritime",
+                    0
+                ]
+            ],
+            "type": "line",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "id": "State-Province-Dash-Highlight",
+            "paint": {
+                "line-opacity": 1,
+                "line-color": "#f03250",
+                "line-width": 2,
+                "line-blur": 1
+            },
+            "source-layer": "admin"
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "visibility": "visible",
+                "line-cap": "butt",
+                "line-join": "bevel"
+            },
+            "metadata": {
+                "mapbox:group": "1449284945736.223"
+            },
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "admin_level",
+                    4
+                ],
+                [
+                    "==",
+                    "maritime",
+                    0
+                ]
+            ],
+            "type": "line",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "id": "State-Province-Dash ",
+            "paint": {
+                "line-dasharray": [
+                    6,
+                    9
+                ],
+                "line-width": 0.5
+            },
+            "source-layer": "admin"
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "text-field": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            3,
+                            "{abbr}"
+                        ],
+                        [
+                            4,
+                            "{name}"
+                        ]
+                    ]
+                },
+                "text-font": [
+                    "Clan Offc Pro Narrow Medium",
+                    "Arial Unicode MS Regular"
+                ],
+                "text-size": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            3,
+                            10
+                        ],
+                        [
+                            4,
+                            12
+                        ]
+                    ]
+                },
+                "text-transform": "uppercase",
+                "text-letter-spacing": 0.03
+            },
+            "metadata": {
+                "mapbox:group": "1449284945736.223"
+            },
+            "type": "symbol",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "id": "State-Province-Dash-Label",
+            "paint": {
+                "text-opacity": 1,
+                "text-halo-color": "rgba(247,245,245,0.55)",
+                "text-halo-width": 0.5,
+                "text-halo-blur": 2
+            },
+            "source-layer": "state_label"
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "visibility": "visible",
+                "line-cap": "butt",
+                "line-join": "bevel"
+            },
+            "metadata": {
+                "mapbox:group": "1449284945736.223"
+            },
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "admin_level",
+                    2
+                ],
+                [
+                    "==",
+                    "maritime",
+                    0
+                ]
+            ],
+            "type": "line",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "id": "International-Dash-Highlight",
+            "paint": {
+                "line-blur": 1,
+                "line-color": "#f03250",
+                "line-opacity": 0.9,
+                "line-width": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            2,
+                            3
+                        ],
+                        [
+                            4,
+                            5
+                        ]
+                    ]
+                }
+            },
+            "source-layer": "admin"
+        },
+        {
+            "interactive": true,
+            "metadata": {
+                "mapbox:group": "1449284945736.223"
+            },
+            "id": "International-Dash",
+            "paint": {
+                "line-dasharray": [
+                    3,
+                    3
+                ]
+            },
+            "ref": "International-Dash-Highlight"
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "text-size": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            0,
+                            7
+                        ],
+                        [
+                            4,
+                            10
+                        ]
+                    ]
+                },
+                "text-allow-overlap": false,
+                "icon-image": "red-circle",
+                "symbol-avoid-edges": false,
+                "text-ignore-placement": false,
+                "text-transform": "none",
+                "text-font": [
+                    "Clan Offc Pro Narrow Medium",
+                    "Arial Unicode MS Regular"
+                ],
+                "symbol-placement": "point",
+                "text-justify": "center",
+                "text-offset": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            0,
+                            [
+                                0.8,
+                                0
+                            ]
+                        ],
+                        [
+                            4,
+                            [
+                                0.5,
+                                0
+                            ]
+                        ]
+                    ]
+                },
+                "text-rotation-alignment": "viewport",
+                "icon-size": 0.7,
+                "text-anchor": "left",
+                "text-field": "{GN_ASCII}"
+            },
+            "metadata": {
+                "mapbox:group": "1449283786574.4106"
+            },
+            "filter": [
+                "<=",
+                "GN_POP",
+                49999
+            ],
+            "type": "symbol",
+            "source": "mapbox://jonahadkins.byd7fzt0",
+            "id": "Less Than 50k",
+            "paint": {
+                "text-halo-color": "rgba(247,245,245,0.56)",
+                "text-halo-width": 0.5,
+                "text-halo-blur": 2,
+                "icon-opacity": 1
+            },
+            "source-layer": "ne_50m_populated_places"
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "text-size": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            0,
+                            7
+                        ],
+                        [
+                            4,
+                            10
+                        ]
+                    ]
+                },
+                "text-allow-overlap": false,
+                "icon-image": "red-triangle",
+                "symbol-avoid-edges": false,
+                "text-ignore-placement": false,
+                "text-transform": "none",
+                "text-font": [
+                    "Clan Offc Pro Narrow Medium",
+                    "Arial Unicode MS Regular"
+                ],
+                "symbol-placement": "point",
+                "text-justify": "center",
+                "text-offset": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            0,
+                            [
+                                0.8,
+                                0
+                            ]
+                        ],
+                        [
+                            4,
+                            [
+                                0.5,
+                                0
+                            ]
+                        ]
+                    ]
+                },
+                "text-rotation-alignment": "viewport",
+                "icon-size": 0.7,
+                "text-anchor": "left",
+                "text-field": "{GN_ASCII}"
+            },
+            "metadata": {
+                "mapbox:group": "1449283786574.4106"
+            },
+            "filter": [
+                "all",
+                [
+                    "<",
+                    "GN_POP",
+                    99999
+                ],
+                [
+                    ">=",
+                    "GN_POP",
+                    50000
+                ]
+            ],
+            "type": "symbol",
+            "source": "mapbox://jonahadkins.byd7fzt0",
+            "id": "50k - 100k Label ",
+            "paint": {
+                "text-halo-color": "rgba(247,245,245,0.56)",
+                "text-halo-width": 0.5,
+                "text-halo-blur": 2,
+                "icon-opacity": 1
+            },
+            "source-layer": "ne_50m_populated_places"
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "text-size": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            3,
+                            8
+                        ],
+                        [
+                            4,
+                            11
+                        ]
+                    ]
+                },
+                "text-allow-overlap": false,
+                "icon-image": "red-square",
+                "symbol-avoid-edges": false,
+                "text-ignore-placement": false,
+                "text-transform": "none",
+                "text-font": [
+                    "Clan Offc Pro Narrow Medium",
+                    "Arial Unicode MS Regular"
+                ],
+                "symbol-placement": "point",
+                "text-justify": "center",
+                "visibility": "visible",
+                "text-offset": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            0,
+                            [
+                                0.8,
+                                0
+                            ]
+                        ],
+                        [
+                            4,
+                            [
+                                0.4,
+                                0
+                            ]
+                        ]
+                    ]
+                },
+                "text-rotation-alignment": "viewport",
+                "icon-size": 0.5,
+                "text-anchor": "left",
+                "text-field": "{GN_ASCII}"
+            },
+            "metadata": {
+                "mapbox:group": "1449283786574.4106"
+            },
+            "filter": [
+                "all",
+                [
+                    "<",
+                    "GN_POP",
+                    499999
+                ],
+                [
+                    ">=",
+                    "GN_POP",
+                    100000
+                ]
+            ],
+            "type": "symbol",
+            "source": "mapbox://jonahadkins.byd7fzt0",
+            "id": "100k - 500k Label ",
+            "paint": {
+                "text-halo-color": "rgba(247,245,245,0.56)",
+                "text-halo-width": 0.5,
+                "text-halo-blur": 2,
+                "icon-opacity": 1
+            },
+            "source-layer": "ne_50m_populated_places"
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "text-size": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            3,
+                            11
+                        ],
+                        [
+                            4,
+                            13
+                        ]
+                    ]
+                },
+                "text-allow-overlap": false,
+                "icon-image": "red-pentagon",
+                "symbol-avoid-edges": false,
+                "text-ignore-placement": false,
+                "text-transform": "none",
+                "text-font": [
+                    "Clan Offc Pro Narrow Medium",
+                    "Arial Unicode MS Regular"
+                ],
+                "symbol-placement": "point",
+                "text-justify": "center",
+                "text-offset": [
+                    0.5,
+                    0
+                ],
+                "text-rotation-alignment": "viewport",
+                "icon-size": 0.9,
+                "text-anchor": "left",
+                "text-field": "{GN_ASCII}"
+            },
+            "metadata": {
+                "mapbox:group": "1449283786574.4106"
+            },
+            "filter": [
+                "all",
+                [
+                    "<",
+                    "GN_POP",
+                    1000000
+                ],
+                [
+                    ">=",
+                    "GN_POP",
+                    500000
+                ]
+            ],
+            "type": "symbol",
+            "source": "mapbox://jonahadkins.byd7fzt0",
+            "id": "500k - 1Mil Label",
+            "paint": {
+                "text-halo-color": "rgba(247,245,245,0.56)",
+                "text-halo-width": 0.5,
+                "text-halo-blur": 2,
+                "icon-opacity": 1
+            },
+            "source-layer": "ne_50m_populated_places"
+        },
+        {
+            "interactive": true,
+            "layout": {
+                "text-size": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            0,
+                            15
+                        ],
+                        [
+                            4,
+                            18
+                        ]
+                    ]
+                },
+                "text-allow-overlap": false,
+                "icon-image": "red-circle",
+                "symbol-avoid-edges": false,
+                "text-ignore-placement": false,
+                "text-transform": "none",
+                "text-font": [
+                    "Clan Offc Pro Narrow Medium",
+                    "Arial Unicode MS Regular"
+                ],
+                "symbol-placement": "point",
+                "text-justify": "center",
+                "text-offset": [
+                    0.5,
+                    0
+                ],
+                "text-rotation-alignment": "viewport",
+                "text-anchor": "left",
+                "text-field": "{GN_ASCII}",
+                "text-letter-spacing": 0.03
+            },
+            "metadata": {
+                "mapbox:group": "1449283786574.4106"
+            },
+            "filter": [
+                ">=",
+                "GN_POP",
+                1000000
+            ],
+            "type": "symbol",
+            "source": "mapbox://jonahadkins.byd7fzt0",
+            "id": "Greater Than 1 Million Label",
+            "paint": {
+                "text-halo-color": "rgba(247,245,245,0.56)",
+                "text-halo-width": 0.5,
+                "text-halo-blur": 2,
+                "icon-opacity": 1
+            },
+            "source-layer": "ne_50m_populated_places"
+        },
+        {
+            "layout": {
+                "visibility": "visible"
+            },
+            "type": "line",
+            "source": "mapbox://jonahadkins.33rh5st0",
+            "id": "ne-50m-geographic-lines",
+            "paint": {
+                "line-dasharray": [
+                    5,
+                    5
+                ],
+                "line-opacity": 0.8
+            },
+            "source-layer": "ne_50m_geographic_lines",
+            "interactive": true
+        },
+        {
+            "layout": {
+                "text-size": 9,
+                "text-allow-overlap": false,
+                "symbol-avoid-edges": false,
+                "text-ignore-placement": true,
+                "text-transform": "uppercase",
+                "text-font": [
+                    "Clan Offc Pro Narrow Medium"
+                ],
+                "symbol-placement": "line",
+                "visibility": "visible",
+                "text-anchor": "bottom",
+                "text-field": "{name}"
+            },
+            "type": "symbol",
+            "source": "mapbox://jonahadkins.33rh5st0",
+            "id": "ne-50m-geographic-labels",
+            "paint": {},
+            "source-layer": "ne_50m_geographic_lines",
+            "interactive": true
+        },
+        {
+            "layout": {
+                "visibility": "visible"
+            },
+            "type": "line",
+            "source": "mapbox://jonahadkins.cvsuibiq",
+            "id": "ne-50m-graticules-10",
+            "paint": {
+                "line-width": 0.1,
+                "line-opacity": 0.7
+            },
+            "source-layer": "ne_50m_graticules_10",
+            "interactive": true
+        }
+    ],
+    "created": "2015-12-06T01:28:19.504Z",
+    "id": "cihtuoe6g00d4npm4ba8omzgd",
+    "modified": "2015-12-06T21:21:41.581Z",
+    "owner": "jonahadkins",
+    "draft": false
+}

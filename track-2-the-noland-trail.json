@@ -1,0 +1,1999 @@
+{
+    "version": 8,
+    "name": "noland_trail",
+    "metadata": {
+        "mapbox:groups": {
+            "1448751195491.6753": {
+                "name": "trail top",
+                "collapsed": false
+            },
+            "1448758365890.2996": {
+                "name": "Points",
+                "collapsed": false
+            },
+            "1448685806877.4583": {
+                "name": "trees",
+                "collapsed": true
+            },
+            "1448727865787.3809": {
+                "name": "Countours",
+                "collapsed": true
+            },
+            "1448684026000.663": {
+                "name": "Depth",
+                "collapsed": false
+            },
+            "1448684652191.2866": {
+                "name": "depths",
+                "collapsed": false
+            },
+            "1448730241107.1035": {
+                "name": "trees",
+                "collapsed": true
+            },
+            "1448684624436.6182": {
+                "name": "Group"
+            },
+            "1448726665895.7405": {
+                "name": "Deep-Water",
+                "collapsed": true
+            }
+        }
+    },
+    "center": [
+        -76.48367525096286,
+        37.04760549602102
+    ],
+    "zoom": 15,
+    "bearing": 88.4983084883122,
+    "pitch": 0,
+    "sources": {
+        "mapbox://mapbox.mapbox-streets-v6": {
+            "url": "mapbox://mapbox.mapbox-streets-v6",
+            "type": "vector"
+        },
+        "mapbox://jonahadkins.2c317jl0": {
+            "url": "mapbox://jonahadkins.2c317jl0",
+            "type": "vector"
+        },
+        "mapbox://jonahadkins.aj2sfg3p": {
+            "url": "mapbox://jonahadkins.aj2sfg3p",
+            "type": "raster"
+        },
+        "mapbox://jonahadkins.crc153dw": {
+            "url": "mapbox://jonahadkins.crc153dw",
+            "type": "vector"
+        },
+        "mapbox://jonahadkins.cdmz9e6l": {
+            "url": "mapbox://jonahadkins.cdmz9e6l",
+            "type": "vector"
+        },
+        "mapbox://jonahadkins.bsbg3unh": {
+            "url": "mapbox://jonahadkins.bsbg3unh",
+            "type": "vector"
+        },
+        "mapbox://jonahadkins.6skly63l": {
+            "url": "mapbox://jonahadkins.6skly63l",
+            "type": "vector"
+        },
+        "mapbox://jonahadkins.4o41hw0a": {
+            "url": "mapbox://jonahadkins.4o41hw0a",
+            "type": "vector"
+        },
+        "mapbox://jonahadkins.b06u8ygt": {
+            "url": "mapbox://jonahadkins.b06u8ygt",
+            "type": "vector"
+        }
+    },
+    "sprite": "mapbox://sprites/jonahadkins/cihhvsk6100s4jnkx4v991bxi",
+    "glyphs": "mapbox://fonts/jonahadkins/{fontstack}/{range}.pbf",
+    "layers": [
+        {
+            "id": "background",
+            "type": "background",
+            "paint": {
+                "background-color": "#e3e2e2"
+            },
+            "interactive": true
+        },
+        {
+            "minzoom": 14,
+            "maxzoom": 18,
+            "type": "raster",
+            "paint": {
+                "raster-opacity": 1,
+                "raster-saturation": 0,
+                "raster-contrast": 0
+            },
+            "layout": {
+                "visibility": "visible"
+            },
+            "id": "terrain",
+            "source": "mapbox://jonahadkins.aj2sfg3p",
+            "interactive": true
+        },
+        {
+            "interactive": true,
+            "minzoom": 14,
+            "layout": {
+                "visibility": "visible"
+            },
+            "maxzoom": 18,
+            "type": "fill",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "id": "building",
+            "paint": {
+                "fill-color": "#d2d2d2",
+                "fill-outline-color": "#b3b3b3",
+                "fill-antialias": true,
+                "fill-opacity": 0.6
+            },
+            "source-layer": "building"
+        },
+        {
+            "interactive": true,
+            "minzoom": 13,
+            "layout": {
+                "visibility": "visible"
+            },
+            "maxzoom": 18,
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "$type",
+                    "Polygon"
+                ],
+                [
+                    "==",
+                    "osm_id",
+                    3000005392962
+                ]
+            ],
+            "type": "fill",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "id": "museum-park",
+            "paint": {
+                "fill-color": "rgba(132,191,133,1)",
+                "fill-opacity": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            13,
+                            1
+                        ],
+                        [
+                            15,
+                            0.5
+                        ]
+                    ]
+                },
+                "fill-antialias": true
+            },
+            "source-layer": "landuse"
+        },
+        {
+            "interactive": true,
+            "minzoom": 14,
+            "layout": {},
+            "maxzoom": 18,
+            "filter": [
+                "==",
+                "osm_id",
+                3000005392962
+            ],
+            "type": "line",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "id": "museum-park-outline",
+            "paint": {
+                "line-color": "#84bf85",
+                "line-width": 20,
+                "line-blur": 10
+            },
+            "source-layer": "landuse"
+        },
+        {
+            "interactive": true,
+            "minzoom": 14,
+            "layout": {
+                "visibility": "visible",
+                "line-cap": "butt",
+                "line-join": "miter"
+            },
+            "maxzoom": 18,
+            "filter": [
+                "in",
+                "class",
+                "motorway",
+                "street",
+                "main"
+            ],
+            "type": "line",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "id": "road",
+            "paint": {
+                "line-color": "rgba(255,255,255,1)",
+                "line-width": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            14,
+                            6
+                        ],
+                        [
+                            17,
+                            12
+                        ]
+                    ]
+                },
+                "line-opacity": 0.8,
+                "line-blur": 2
+            },
+            "source-layer": "road"
+        },
+        {
+            "interactive": true,
+            "minzoom": 14,
+            "layout": {
+                "visibility": "visible",
+                "line-cap": "butt",
+                "line-join": "miter"
+            },
+            "maxzoom": 18,
+            "filter": [
+                "==",
+                "class",
+                "service"
+            ],
+            "type": "line",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "id": "service-road",
+            "paint": {
+                "line-color": "rgba(255,255,255,1)",
+                "line-width": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            14,
+                            4
+                        ],
+                        [
+                            17,
+                            10
+                        ]
+                    ]
+                },
+                "line-opacity": 0.8,
+                "line-blur": 2
+            },
+            "source-layer": "road"
+        },
+        {
+            "interactive": true,
+            "minzoom": 15,
+            "layout": {
+                "visibility": "visible"
+            },
+            "maxzoom": 18,
+            "type": "fill",
+            "source": "mapbox://jonahadkins.cdmz9e6l",
+            "id": "buiding-shadow",
+            "paint": {
+                "fill-color": "rgba(115,115,115,1)",
+                "fill-outline-color": "#959393",
+                "fill-opacity": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            14,
+                            0
+                        ],
+                        [
+                            15,
+                            0
+                        ],
+                        [
+                            16,
+                            0.45
+                        ],
+                        [
+                            17,
+                            0.45
+                        ]
+                    ]
+                },
+                "fill-translate": [
+                    -4,
+                    3
+                ],
+                "fill-antialias": false,
+                "fill-translate-anchor": "map"
+            },
+            "source-layer": "buidings"
+        },
+        {
+            "interactive": true,
+            "minzoom": 14,
+            "layout": {
+                "visibility": "visible"
+            },
+            "maxzoom": 18,
+            "type": "fill",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "id": "water",
+            "paint": {
+                "fill-color": "#9dc6e7",
+                "fill-outline-color": "rgba(250,250,250,0.53)",
+                "fill-antialias": false
+            },
+            "source-layer": "water"
+        },
+        {
+            "interactive": true,
+            "minzoom": 14,
+            "layout": {
+                "visibility": "visible"
+            },
+            "metadata": {
+                "mapbox:group": "1448726665895.7405"
+            },
+            "maxzoom": 18,
+            "filter": [
+                "==",
+                "distance",
+                -10
+            ],
+            "type": "fill",
+            "source": "mapbox://jonahadkins.2c317jl0",
+            "id": "10",
+            "paint": {
+                "fill-color": "#9dc6e7"
+            },
+            "source-layer": "mm_water_inner"
+        },
+        {
+            "interactive": true,
+            "minzoom": 14,
+            "layout": {
+                "visibility": "visible"
+            },
+            "metadata": {
+                "mapbox:group": "1448726665895.7405"
+            },
+            "maxzoom": 18,
+            "filter": [
+                "==",
+                "distance",
+                -25
+            ],
+            "type": "fill",
+            "source": "mapbox://jonahadkins.2c317jl0",
+            "id": "25",
+            "paint": {
+                "fill-color": "#9dc6e7"
+            },
+            "source-layer": "mm_water_inner"
+        },
+        {
+            "interactive": true,
+            "minzoom": 14,
+            "layout": {
+                "visibility": "visible"
+            },
+            "metadata": {
+                "mapbox:group": "1448726665895.7405"
+            },
+            "maxzoom": 18,
+            "filter": [
+                "==",
+                "distance",
+                -50
+            ],
+            "type": "fill",
+            "source": "mapbox://jonahadkins.2c317jl0",
+            "id": "50",
+            "paint": {
+                "fill-color": "#9dc6e7"
+            },
+            "source-layer": "mm_water_inner"
+        },
+        {
+            "interactive": true,
+            "minzoom": 14,
+            "layout": {
+                "visibility": "visible"
+            },
+            "metadata": {
+                "mapbox:group": "1448726665895.7405"
+            },
+            "maxzoom": 18,
+            "filter": [
+                "==",
+                "distance",
+                -100
+            ],
+            "type": "fill",
+            "source": "mapbox://jonahadkins.2c317jl0",
+            "id": "100",
+            "paint": {
+                "fill-color": "#a6cde8"
+            },
+            "source-layer": "mm_water_inner"
+        },
+        {
+            "interactive": true,
+            "minzoom": 14,
+            "layout": {
+                "visibility": "visible"
+            },
+            "metadata": {
+                "mapbox:group": "1448726665895.7405"
+            },
+            "maxzoom": 18,
+            "filter": [
+                "==",
+                "distance",
+                -200
+            ],
+            "type": "fill",
+            "source": "mapbox://jonahadkins.2c317jl0",
+            "id": "200",
+            "paint": {
+                "fill-color": "#afd2e9"
+            },
+            "source-layer": "mm_water_inner"
+        },
+        {
+            "interactive": true,
+            "id": "water pattern ",
+            "paint": {
+                "fill-color": "#bad5ea",
+                "fill-outline-color": "rgba(250,250,250,0.53)",
+                "fill-antialias": true,
+                "fill-translate-anchor": "map",
+                "fill-translate": [
+                    0,
+                    0
+                ],
+                "fill-pattern": "wave2",
+                "fill-opacity": 1
+            },
+            "ref": "water"
+        },
+        {
+            "interactive": true,
+            "minzoom": 15,
+            "layout": {
+                "visibility": "visible"
+            },
+            "maxzoom": 18,
+            "filter": [
+                "==",
+                "Note",
+                "Second"
+            ],
+            "type": "line",
+            "source": "mapbox://jonahadkins.bsbg3unh",
+            "id": "trail-secondary",
+            "paint": {
+                "line-color": "#2a68a6",
+                "line-width": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            15,
+                            2
+                        ],
+                        [
+                            17,
+                            6
+                        ]
+                    ]
+                },
+                "line-dasharray": [
+                    3,
+                    1
+                ]
+            },
+            "source-layer": "trail_lines"
+        },
+        {
+            "interactive": true,
+            "minzoom": 14,
+            "layout": {
+                "visibility": "visible"
+            },
+            "maxzoom": 18,
+            "filter": [
+                "in",
+                "Source",
+                "parking",
+                "piers",
+                "sidewalks"
+            ],
+            "type": "fill",
+            "source": "mapbox://jonahadkins.4o41hw0a",
+            "id": "trail-polygons",
+            "paint": {
+                "fill-color": "rgba(255,255,255,1)",
+                "fill-opacity": 0.7,
+                "fill-antialias": false
+            },
+            "source-layer": "trail_polys"
+        },
+        {
+            "interactive": true,
+            "minzoom": 14,
+            "layout": {
+                "line-cap": "butt",
+                "line-join": "miter"
+            },
+            "maxzoom": 18,
+            "filter": [
+                "in",
+                "Source",
+                "parking",
+                "sidewalks",
+                "piers"
+            ],
+            "type": "line",
+            "source": "mapbox://jonahadkins.4o41hw0a",
+            "id": "trail-polygons-outline",
+            "paint": {
+                "line-color": "rgba(255,255,255,1)",
+                "line-opacity": 0.8,
+                "line-width": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            14,
+                            1
+                        ],
+                        [
+                            17,
+                            6
+                        ]
+                    ]
+                },
+                "line-blur": 2
+            },
+            "source-layer": "trail_polys"
+        },
+        {
+            "interactive": true,
+            "minzoom": 14,
+            "layout": {
+                "visibility": "visible"
+            },
+            "metadata": {
+                "mapbox:group": "1448730241107.1035"
+            },
+            "maxzoom": 18,
+            "filter": [
+                "==",
+                "DN",
+                3
+            ],
+            "type": "fill",
+            "source": "mapbox://jonahadkins.crc153dw",
+            "id": "canopy-3-shadow",
+            "paint": {
+                "fill-color": "#000",
+                "fill-antialias": true,
+                "fill-translate": [
+                    1,
+                    -1
+                ],
+                "fill-opacity": 0.1
+            },
+            "source-layer": "canopy"
+        },
+        {
+            "interactive": true,
+            "metadata": {
+                "mapbox:group": "1448730241107.1035"
+            },
+            "id": "canopy-3",
+            "paint": {
+                "fill-color": "#80c082",
+                "fill-antialias": true,
+                "fill-translate": [
+                    0,
+                    0
+                ],
+                "fill-opacity": 0.7
+            },
+            "ref": "canopy-3-shadow"
+        },
+        {
+            "interactive": true,
+            "minzoom": 14,
+            "layout": {
+                "visibility": "visible"
+            },
+            "metadata": {
+                "mapbox:group": "1448730241107.1035"
+            },
+            "maxzoom": 18,
+            "filter": [
+                "==",
+                "DN",
+                1
+            ],
+            "type": "fill",
+            "source": "mapbox://jonahadkins.crc153dw",
+            "id": "canopy-2-shadow",
+            "paint": {
+                "fill-color": "#000",
+                "fill-antialias": false,
+                "fill-translate": [
+                    1,
+                    -1
+                ],
+                "fill-opacity": 0.1
+            },
+            "source-layer": "canopy"
+        },
+        {
+            "interactive": true,
+            "metadata": {
+                "mapbox:group": "1448730241107.1035"
+            },
+            "id": "canopy-2",
+            "paint": {
+                "fill-color": "#a1d0a3",
+                "fill-antialias": false,
+                "fill-translate": [
+                    0,
+                    0
+                ],
+                "fill-opacity": 0.7
+            },
+            "ref": "canopy-2-shadow"
+        },
+        {
+            "interactive": true,
+            "minzoom": 14,
+            "layout": {
+                "visibility": "visible"
+            },
+            "metadata": {
+                "mapbox:group": "1448730241107.1035"
+            },
+            "maxzoom": 18,
+            "filter": [
+                "==",
+                "DN",
+                2
+            ],
+            "type": "fill",
+            "source": "mapbox://jonahadkins.crc153dw",
+            "id": "canopy-1-shadow",
+            "paint": {
+                "fill-color": "rgba(0,0,0,1)",
+                "fill-antialias": false,
+                "fill-translate": [
+                    1,
+                    -1
+                ],
+                "fill-opacity": 0.1
+            },
+            "source-layer": "canopy"
+        },
+        {
+            "interactive": true,
+            "metadata": {
+                "mapbox:group": "1448730241107.1035"
+            },
+            "id": "canopy-1",
+            "paint": {
+                "fill-color": "#63ad65",
+                "fill-antialias": false,
+                "fill-translate": [
+                    0,
+                    0
+                ],
+                "fill-opacity": 0.7
+            },
+            "ref": "canopy-1-shadow"
+        },
+        {
+            "interactive": true,
+            "minzoom": 14,
+            "layout": {
+                "visibility": "visible",
+                "line-join": "miter",
+                "line-cap": "butt"
+            },
+            "metadata": {
+                "mapbox:group": "1448727865787.3809"
+            },
+            "maxzoom": 18,
+            "filter": [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            "type": "line",
+            "source": "mapbox://jonahadkins.b06u8ygt",
+            "id": "contours-5m-shadow",
+            "paint": {
+                "line-color": "rgba(148,148,148,1)",
+                "line-blur": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            14,
+                            0.5
+                        ],
+                        [
+                            18,
+                            2
+                        ]
+                    ]
+                },
+                "line-width": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            14,
+                            0.7
+                        ],
+                        [
+                            16,
+                            1
+                        ],
+                        [
+                            17,
+                            2
+                        ]
+                    ]
+                },
+                "line-translate": [
+                    1,
+                    -1
+                ]
+            },
+            "source-layer": "contours_5m"
+        },
+        {
+            "interactive": true,
+            "metadata": {
+                "mapbox:group": "1448727865787.3809"
+            },
+            "id": "contours-5m",
+            "paint": {
+                "line-color": "rgba(255,255,255,1)",
+                "line-blur": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            14,
+                            0.5
+                        ],
+                        [
+                            18,
+                            2
+                        ]
+                    ]
+                },
+                "line-width": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            14,
+                            0.7
+                        ],
+                        [
+                            16,
+                            1
+                        ],
+                        [
+                            17,
+                            2
+                        ]
+                    ]
+                }
+            },
+            "ref": "contours-5m-shadow"
+        },
+        {
+            "interactive": true,
+            "minzoom": 17,
+            "layout": {
+                "text-field": "{Contour}",
+                "text-rotation-alignment": "map",
+                "symbol-placement": "line",
+                "text-font": [
+                    "Droid Serif Bold",
+                    "Arial Unicode MS Regular"
+                ],
+                "text-size": 12
+            },
+            "metadata": {
+                "mapbox:group": "1448727865787.3809"
+            },
+            "maxzoom": 18,
+            "filter": [
+                "==",
+                "$type",
+                "LineString"
+            ],
+            "type": "symbol",
+            "source": "mapbox://jonahadkins.b06u8ygt",
+            "id": "contours-5m-label",
+            "paint": {
+                "text-color": "rgba(255,255,255,1)",
+                "text-opacity": 0.8
+            },
+            "source-layer": "contours_5m"
+        },
+        {
+            "interactive": true,
+            "minzoom": 15,
+            "layout": {
+                "visibility": "visible"
+            },
+            "maxzoom": 18,
+            "filter": [
+                "==",
+                "Note",
+                "Cut Thrus"
+            ],
+            "type": "line",
+            "source": "mapbox://jonahadkins.bsbg3unh",
+            "id": "trail-cut-thrus",
+            "paint": {
+                "line-color": "#2a68a6",
+                "line-width": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            14,
+                            1
+                        ],
+                        [
+                            17,
+                            3
+                        ]
+                    ]
+                },
+                "line-dasharray": [
+                    1,
+                    1
+                ]
+            },
+            "source-layer": "trail_lines"
+        },
+        {
+            "interactive": true,
+            "minzoom": 14,
+            "layout": {
+                "visibility": "visible"
+            },
+            "maxzoom": 18,
+            "type": "fill",
+            "source": "mapbox://jonahadkins.cdmz9e6l",
+            "id": "museum-buidings",
+            "paint": {
+                "fill-color": "#b3b3b3",
+                "fill-outline-color": "#959393",
+                "fill-opacity": 1,
+                "fill-antialias": false
+            },
+            "source-layer": "buidings"
+        },
+        {
+            "interactive": true,
+            "minzoom": 14,
+            "layout": {},
+            "maxzoom": 18,
+            "filter": [
+                "in",
+                "$type",
+                "Polygon",
+                "Point",
+                "LineString"
+            ],
+            "type": "line",
+            "source": "mapbox://jonahadkins.cdmz9e6l",
+            "id": "museum-buidings-outline",
+            "paint": {
+                "line-color": "#959393",
+                "line-blur": 2
+            },
+            "source-layer": "buidings"
+        },
+        {
+            "interactive": true,
+            "minzoom": 14,
+            "layout": {
+                "visibility": "visible",
+                "line-cap": "butt",
+                "line-join": "miter"
+            },
+            "maxzoom": 18,
+            "filter": [
+                "in",
+                "class",
+                "motorway",
+                "street",
+                "main"
+            ],
+            "type": "line",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "id": "bridge",
+            "paint": {
+                "line-color": "rgba(255,255,255,1)",
+                "line-width": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            14,
+                            6
+                        ],
+                        [
+                            17,
+                            12
+                        ]
+                    ]
+                },
+                "line-opacity": 0.65,
+                "line-blur": 2
+            },
+            "source-layer": "bridge"
+        },
+        {
+            "interactive": true,
+            "minzoom": 14,
+            "layout": {
+                "text-size": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            14,
+                            16
+                        ],
+                        [
+                            17,
+                            60
+                        ]
+                    ]
+                },
+                "text-allow-overlap": true,
+                "text-ignore-placement": false,
+                "text-transform": "uppercase",
+                "text-font": [
+                    "Droid Serif Regular",
+                    "Arial Unicode MS Regular"
+                ],
+                "symbol-placement": "point",
+                "visibility": "visible",
+                "text-field": "{name}",
+                "text-rotate": -3,
+                "text-letter-spacing": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            14,
+                            0.5
+                        ],
+                        [
+                            22,
+                            1
+                        ]
+                    ]
+                },
+                "text-max-width": 15
+            },
+            "maxzoom": 18,
+            "filter": [
+                "all",
+                [
+                    "in",
+                    "$type",
+                    "LineString",
+                    "Point"
+                ],
+                [
+                    "==",
+                    "osm_id",
+                    1000021442893
+                ]
+            ],
+            "type": "symbol",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "id": "lake-maury-label",
+            "paint": {
+                "text-color": "rgba(255,255,255,1)",
+                "text-halo-width": 1.2,
+                "text-halo-color": "#b4d0e3",
+                "text-halo-blur": 2
+            },
+            "source-layer": "water_label"
+        },
+        {
+            "interactive": true,
+            "minzoom": 14,
+            "layout": {
+                "text-size": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            14,
+                            8
+                        ],
+                        [
+                            17,
+                            24
+                        ]
+                    ]
+                },
+                "text-allow-overlap": true,
+                "text-transform": "uppercase",
+                "text-font": [
+                    "Droid Serif Regular",
+                    "Arial Unicode MS Regular"
+                ],
+                "symbol-placement": "point",
+                "visibility": "visible",
+                "text-field": "{name}",
+                "text-rotate": 2,
+                "text-letter-spacing": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            14,
+                            0
+                        ],
+                        [
+                            22,
+                            0.5
+                        ]
+                    ]
+                },
+                "text-max-width": 15
+            },
+            "maxzoom": 18,
+            "filter": [
+                "all",
+                [
+                    "in",
+                    "$type",
+                    "LineString",
+                    "Point"
+                ],
+                [
+                    "==",
+                    "osm_id",
+                    1000210226961
+                ]
+            ],
+            "type": "symbol",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "id": "kettle-pond-label",
+            "paint": {
+                "text-color": "rgba(255,255,255,1)",
+                "text-halo-width": 1.2,
+                "text-halo-color": "#b4d0e3",
+                "text-halo-blur": 2,
+                "text-translate": [
+                    -5,
+                    5
+                ]
+            },
+            "source-layer": "water_label"
+        },
+        {
+            "interactive": true,
+            "minzoom": 14,
+            "layout": {
+                "visibility": "visible",
+                "line-cap": "round"
+            },
+            "metadata": {
+                "mapbox:group": "1448751195491.6753"
+            },
+            "maxzoom": 18,
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "$type",
+                    "LineString"
+                ],
+                [
+                    "==",
+                    "Note",
+                    "Bridge"
+                ]
+            ],
+            "type": "line",
+            "source": "mapbox://jonahadkins.bsbg3unh",
+            "id": "trail-bridge-shadow",
+            "paint": {
+                "line-color": "rgba(3,3,3,1)",
+                "line-width": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            14,
+                            2
+                        ],
+                        [
+                            15,
+                            3
+                        ],
+                        [
+                            17,
+                            8
+                        ]
+                    ]
+                },
+                "line-dasharray": [
+                    1,
+                    0
+                ],
+                "line-translate": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            14,
+                            [
+                                0,
+                                0
+                            ]
+                        ],
+                        [
+                            18,
+                            [
+                                -5,
+                                4
+                            ]
+                        ]
+                    ]
+                },
+                "line-opacity": 0.3
+            },
+            "source-layer": "trail_lines"
+        },
+        {
+            "interactive": true,
+            "minzoom": 14,
+            "layout": {
+                "visibility": "visible",
+                "line-cap": "round",
+                "line-join": "bevel"
+            },
+            "metadata": {
+                "mapbox:group": "1448751195491.6753"
+            },
+            "maxzoom": 18,
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "$type",
+                    "LineString"
+                ],
+                [
+                    "==",
+                    "Note",
+                    "Trail"
+                ]
+            ],
+            "type": "line",
+            "source": "mapbox://jonahadkins.bsbg3unh",
+            "id": "trail-noland-cap",
+            "paint": {
+                "line-color": "#145277",
+                "line-width": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            14,
+                            0
+                        ],
+                        [
+                            15,
+                            6
+                        ],
+                        [
+                            17,
+                            12
+                        ]
+                    ]
+                },
+                "line-dasharray": [
+                    1,
+                    0
+                ]
+            },
+            "source-layer": "trail_lines"
+        },
+        {
+            "interactive": true,
+            "minzoom": 14,
+            "layout": {
+                "visibility": "visible",
+                "line-cap": "round",
+                "line-join": "bevel"
+            },
+            "metadata": {
+                "mapbox:group": "1448751195491.6753"
+            },
+            "maxzoom": 18,
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "$type",
+                    "LineString"
+                ],
+                [
+                    "==",
+                    "Note",
+                    "Bridge"
+                ]
+            ],
+            "type": "line",
+            "source": "mapbox://jonahadkins.bsbg3unh",
+            "id": "trail-bridge-cap",
+            "paint": {
+                "line-color": "#145277",
+                "line-width": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            14,
+                            0
+                        ],
+                        [
+                            15,
+                            6
+                        ],
+                        [
+                            17,
+                            12
+                        ]
+                    ]
+                },
+                "line-dasharray": [
+                    1,
+                    0
+                ]
+            },
+            "source-layer": "trail_lines"
+        },
+        {
+            "interactive": true,
+            "minzoom": 14,
+            "layout": {
+                "visibility": "visible",
+                "line-cap": "round"
+            },
+            "metadata": {
+                "mapbox:group": "1448751195491.6753"
+            },
+            "maxzoom": 18,
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "$type",
+                    "LineString"
+                ],
+                [
+                    "==",
+                    "Note",
+                    "Trail"
+                ]
+            ],
+            "type": "line",
+            "source": "mapbox://jonahadkins.bsbg3unh",
+            "id": "trail-noland",
+            "paint": {
+                "line-color": "#2a68a6",
+                "line-width": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            14,
+                            2
+                        ],
+                        [
+                            15,
+                            3
+                        ],
+                        [
+                            17,
+                            8
+                        ]
+                    ]
+                },
+                "line-dasharray": [
+                    1,
+                    0
+                ]
+            },
+            "source-layer": "trail_lines"
+        },
+        {
+            "interactive": true,
+            "metadata": {
+                "mapbox:group": "1448751195491.6753"
+            },
+            "id": "trail-bridge",
+            "paint": {
+                "line-color": "rgba(255,255,255,1)",
+                "line-width": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            14,
+                            2
+                        ],
+                        [
+                            15,
+                            3
+                        ],
+                        [
+                            17,
+                            8
+                        ]
+                    ]
+                },
+                "line-dasharray": [
+                    1,
+                    0
+                ]
+            },
+            "ref": "trail-bridge-shadow"
+        },
+        {
+            "interactive": true,
+            "minzoom": 16,
+            "layout": {
+                "text-size": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            16,
+                            10
+                        ],
+                        [
+                            17,
+                            17
+                        ]
+                    ]
+                },
+                "text-allow-overlap": false,
+                "symbol-avoid-edges": false,
+                "text-ignore-placement": false,
+                "text-max-angle": 45,
+                "text-transform": "uppercase",
+                "symbol-spacing": 1,
+                "text-font": [
+                    "Droid Serif Bold",
+                    "Arial Unicode MS Regular"
+                ],
+                "symbol-placement": "line",
+                "text-justify": "center",
+                "text-padding": 2,
+                "visibility": "visible",
+                "text-offset": [
+                    0,
+                    -0.2
+                ],
+                "text-rotation-alignment": "map",
+                "text-anchor": "bottom",
+                "text-keep-upright": true,
+                "text-field": "{name}",
+                "text-rotate": 0,
+                "text-letter-spacing": 0.02,
+                "text-max-width": 3
+            },
+            "metadata": {
+                "mapbox:group": "1448751195491.6753"
+            },
+            "maxzoom": 18,
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "class",
+                    "path"
+                ],
+                [
+                    "in",
+                    "name",
+                    "Meadow Path",
+                    "The Noland Trail"
+                ]
+            ],
+            "type": "symbol",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "id": "trail-noland-label",
+            "paint": {
+                "text-color": "#145277",
+                "text-halo-color": "rgba(255,255,255,1)",
+                "text-halo-width": 1,
+                "text-halo-blur": 0.5
+            },
+            "source-layer": "road_label"
+        },
+        {
+            "interactive": true,
+            "minzoom": 15,
+            "layout": {
+                "text-size": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            15,
+                            8
+                        ],
+                        [
+                            17,
+                            16
+                        ]
+                    ]
+                },
+                "text-allow-overlap": false,
+                "symbol-avoid-edges": false,
+                "text-ignore-placement": false,
+                "text-transform": "uppercase",
+                "text-font": [
+                    "Droid Serif Bold",
+                    "Arial Unicode MS Regular"
+                ],
+                "symbol-placement": "line",
+                "visibility": "visible",
+                "text-rotation-alignment": "map",
+                "text-keep-upright": true,
+                "text-field": "{name}",
+                "text-max-width": 3
+            },
+            "maxzoom": 18,
+            "filter": [
+                "all",
+                [
+                    "in",
+                    "class",
+                    "motorway",
+                    "street",
+                    "service",
+                    "main"
+                ],
+                [
+                    "!in",
+                    "name",
+                    "Boundary Rd",
+                    "Museum Dr",
+                    "Museum Pkwy"
+                ]
+            ],
+            "type": "symbol",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "id": "road-label-other",
+            "paint": {
+                "text-color": "rgba(166,164,164,1)",
+                "text-halo-color": "#e3e2e2",
+                "text-halo-width": 2,
+                "text-halo-blur": 1,
+                "text-opacity": 0.8
+            },
+            "source-layer": "road_label"
+        },
+        {
+            "interactive": true,
+            "minzoom": 14,
+            "layout": {
+                "visibility": "visible",
+                "text-field": "{name} SUBDIVISION",
+                "text-font": [
+                    "Droid Serif Bold",
+                    "Arial Unicode MS Regular"
+                ],
+                "text-transform": "uppercase",
+                "text-size": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            14,
+                            9
+                        ],
+                        [
+                            17,
+                            24
+                        ]
+                    ]
+                },
+                "text-allow-overlap": true,
+                "text-rotation-alignment": "viewport",
+                "text-max-width": 9
+            },
+            "maxzoom": 18,
+            "type": "symbol",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "id": "place-label",
+            "paint": {
+                "text-color": "rgba(166,164,164,1)",
+                "text-halo-color": "#e3e2e2",
+                "text-halo-blur": 1,
+                "text-halo-width": 2
+            },
+            "source-layer": "place_label"
+        },
+        {
+            "interactive": true,
+            "minzoom": 14,
+            "layout": {
+                "text-size": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            14,
+                            8
+                        ],
+                        [
+                            17,
+                            18
+                        ]
+                    ]
+                },
+                "text-allow-overlap": false,
+                "symbol-avoid-edges": false,
+                "text-ignore-placement": false,
+                "text-transform": "uppercase",
+                "text-font": [
+                    "Droid Serif Bold",
+                    "Arial Unicode MS Regular"
+                ],
+                "symbol-placement": "line",
+                "visibility": "visible",
+                "text-rotation-alignment": "map",
+                "text-keep-upright": true,
+                "text-field": "{name}",
+                "text-max-width": 3
+            },
+            "maxzoom": 18,
+            "filter": [
+                "all",
+                [
+                    "in",
+                    "class",
+                    "motorway",
+                    "street",
+                    "service",
+                    "main"
+                ],
+                [
+                    "in",
+                    "name",
+                    "Boundary Rd",
+                    "Museum Dr",
+                    "Museum Pkwy"
+                ]
+            ],
+            "type": "symbol",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "id": "road-label-museum",
+            "paint": {
+                "text-color": "rgba(15,14,14,1)",
+                "text-halo-color": "rgba(143,139,139,1)",
+                "text-halo-width": 0,
+                "text-halo-blur": 0.5
+            },
+            "source-layer": "road_label"
+        },
+        {
+            "interactive": true,
+            "minzoom": 16,
+            "layout": {
+                "text-line-height": 0.9,
+                "icon-image": "circle-stroked-18",
+                "text-transform": "none",
+                "text-font": [
+                    "Droid Serif Bold",
+                    "Arial Unicode MS Regular"
+                ],
+                "icon-allow-overlap": false,
+                "text-justify": "center",
+                "visibility": "visible",
+                "text-offset": [
+                    0,
+                    -0.7
+                ],
+                "icon-optional": false,
+                "icon-size": 1.2,
+                "text-anchor": "bottom",
+                "text-field": "{name}",
+                "text-max-width": 7,
+                "icon-ignore-placement": false
+            },
+            "metadata": {
+                "mapbox:group": "1448758365890.2996"
+            },
+            "maxzoom": 18,
+            "filter": [
+                "==",
+                "type",
+                "Viewpoint"
+            ],
+            "type": "symbol",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "id": "overlooks",
+            "paint": {
+                "text-color": "#444",
+                "text-halo-color": "rgba(255,255,255,1)",
+                "text-halo-width": 1.2,
+                "text-halo-blur": 3
+            },
+            "source-layer": "poi_label"
+        },
+        {
+            "interactive": true,
+            "minzoom": 16,
+            "layout": {
+                "icon-image": "parking-24",
+                "icon-offset": [
+                    0,
+                    0
+                ],
+                "icon-allow-overlap": false,
+                "icon-ignore-placement": false,
+                "icon-size": 1.2
+            },
+            "metadata": {
+                "mapbox:group": "1448758365890.2996"
+            },
+            "maxzoom": 18,
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "class",
+                    "parking"
+                ],
+                [
+                    "in",
+                    "osm_id",
+                    1000101439217,
+                    1000101439216,
+                    1000289370124,
+                    1000289066400,
+                    1000289315550,
+                    1000289066401,
+                    1000289315551
+                ]
+            ],
+            "type": "symbol",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "id": "parking-labels",
+            "paint": {},
+            "source-layer": "landuse"
+        },
+        {
+            "interactive": true,
+            "minzoom": 15,
+            "layout": {
+                "text-line-height": 0.9,
+                "text-allow-overlap": true,
+                "text-transform": "none",
+                "text-font": [
+                    "Droid Serif Bold",
+                    "Arial Unicode MS Regular"
+                ],
+                "icon-allow-overlap": false,
+                "text-justify": "center",
+                "visibility": "visible",
+                "text-offset": [
+                    0,
+                    0
+                ],
+                "icon-optional": false,
+                "icon-size": 1.2,
+                "text-anchor": "left",
+                "text-field": "{name}",
+                "text-max-width": 7,
+                "icon-ignore-placement": false
+            },
+            "metadata": {
+                "mapbox:group": "1448758365890.2996"
+            },
+            "maxzoom": 18,
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "type",
+                    "Park"
+                ],
+                [
+                    "in",
+                    "name",
+                    "Harvey Field Park",
+                    "Copeland Lane Park",
+                    "Williams Field Park"
+                ]
+            ],
+            "type": "symbol",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "id": "park-areas",
+            "paint": {
+                "text-color": "#444",
+                "text-halo-color": "rgba(255,255,255,1)",
+                "text-halo-width": 1.2,
+                "text-halo-blur": 3
+            },
+            "source-layer": "poi_label"
+        },
+        {
+            "interactive": true,
+            "minzoom": 15,
+            "layout": {
+                "text-line-height": 0.9,
+                "text-size": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            15,
+                            9
+                        ],
+                        [
+                            17,
+                            24
+                        ]
+                    ]
+                },
+                "text-allow-overlap": true,
+                "text-ignore-placement": false,
+                "text-transform": "none",
+                "text-font": [
+                    "Droid Serif Bold",
+                    "Arial Unicode MS Regular"
+                ],
+                "icon-allow-overlap": false,
+                "text-justify": "center",
+                "visibility": "visible",
+                "text-offset": [
+                    0,
+                    0
+                ],
+                "icon-optional": false,
+                "icon-size": 1.2,
+                "text-anchor": "center",
+                "text-field": "{name}",
+                "text-max-width": 7,
+                "icon-ignore-placement": false
+            },
+            "metadata": {
+                "mapbox:group": "1448758365890.2996"
+            },
+            "maxzoom": 18,
+            "filter": [
+                "all",
+                [
+                    "in",
+                    "name",
+                    "USS Monitor",
+                    "International Small Craft Center",
+                    "The Mariners' Museum",
+                    "Peninsula Fine Arts Center",
+                    "NOAA National Marine Sanctuary"
+                ],
+                [
+                    "!=",
+                    "osm_id",
+                    3000004673658
+                ]
+            ],
+            "type": "symbol",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "id": "building-names",
+            "paint": {
+                "text-color": "#444",
+                "text-halo-color": "rgba(255,255,255,1)",
+                "text-halo-width": 1.2,
+                "text-halo-blur": 3
+            },
+            "source-layer": "poi_label"
+        },
+        {
+            "interactive": true,
+            "minzoom": 16,
+            "layout": {
+                "text-line-height": 0.9,
+                "icon-image": "cemetery-18",
+                "text-transform": "none",
+                "text-font": [
+                    "Droid Serif Bold",
+                    "Arial Unicode MS Regular"
+                ],
+                "text-justify": "center",
+                "text-offset": [
+                    0,
+                    0.7
+                ],
+                "icon-size": 1.2,
+                "text-anchor": "top",
+                "text-field": "Gambol Cemetery",
+                "text-max-width": 7
+            },
+            "metadata": {
+                "mapbox:group": "1448758365890.2996"
+            },
+            "maxzoom": 18,
+            "filter": [
+                "==",
+                "Source",
+                "gambolcemetery"
+            ],
+            "type": "symbol",
+            "source": "mapbox://jonahadkins.6skly63l",
+            "id": "cemetery",
+            "paint": {
+                "text-color": "#444",
+                "text-halo-color": "rgba(255,255,255,1)",
+                "text-halo-width": 1.2,
+                "text-halo-blur": 3
+            },
+            "source-layer": "trail_points"
+        },
+        {
+            "interactive": true,
+            "minzoom": 16,
+            "layout": {},
+            "metadata": {
+                "mapbox:group": "1448758365890.2996"
+            },
+            "maxzoom": 18,
+            "filter": [
+                "==",
+                "Source",
+                "trailbenches"
+            ],
+            "type": "circle",
+            "source": "mapbox://jonahadkins.6skly63l",
+            "id": "benches-cap",
+            "paint": {
+                "circle-color": "rgba(255,255,255,1)",
+                "circle-radius": 6,
+                "circle-blur": 0.5
+            },
+            "source-layer": "trail_points"
+        },
+        {
+            "interactive": true,
+            "metadata": {
+                "mapbox:group": "1448758365890.2996"
+            },
+            "id": "benches",
+            "paint": {
+                "circle-color": "#3d83c4",
+                "circle-radius": 4
+            },
+            "ref": "benches-cap"
+        },
+        {
+            "interactive": true,
+            "minzoom": 16,
+            "layout": {},
+            "metadata": {
+                "mapbox:group": "1448758365890.2996"
+            },
+            "maxzoom": 18,
+            "filter": [
+                "==",
+                "Source",
+                "trailmilemarkers"
+            ],
+            "type": "circle",
+            "source": "mapbox://jonahadkins.6skly63l",
+            "id": "mile-markers-cap",
+            "paint": {
+                "circle-color": "#145277",
+                "circle-radius": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            16,
+                            10
+                        ],
+                        [
+                            17,
+                            15
+                        ]
+                    ]
+                },
+                "circle-blur": 0.2
+            },
+            "source-layer": "trail_points"
+        },
+        {
+            "interactive": true,
+            "metadata": {
+                "mapbox:group": "1448758365890.2996"
+            },
+            "id": "mile-markers",
+            "paint": {
+                "circle-color": "#2a68a6",
+                "circle-radius": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            16,
+                            7
+                        ],
+                        [
+                            17,
+                            12
+                        ]
+                    ]
+                }
+            },
+            "ref": "mile-markers-cap"
+        },
+        {
+            "interactive": true,
+            "minzoom": 15,
+            "layout": {
+                "visibility": "none"
+            },
+            "metadata": {
+                "mapbox:group": "1448758365890.2996"
+            },
+            "maxzoom": 18,
+            "type": "line",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "id": "fence",
+            "paint": {
+                "line-color": "#444",
+                "line-opacity": 0.75
+            },
+            "source-layer": "barrier_line"
+        },
+        {
+            "interactive": true,
+            "minzoom": 16,
+            "layout": {
+                "line-join": "miter",
+                "line-cap": "round",
+                "line-miter-limit": 2
+            },
+            "metadata": {
+                "mapbox:group": "1448758365890.2996"
+            },
+            "maxzoom": 18,
+            "filter": [
+                "==",
+                "class",
+                "fence"
+            ],
+            "type": "line",
+            "source": "mapbox://mapbox.mapbox-streets-v6",
+            "id": "fence copy",
+            "paint": {
+                "line-color": "#444",
+                "line-opacity": 0.75,
+                "line-translate": [
+                    0,
+                    0
+                ],
+                "line-dasharray": [
+                    8,
+                    1
+                ],
+                "line-translate-anchor": "map",
+                "line-gap-width": 1
+            },
+            "source-layer": "barrier_line"
+        }
+    ],
+    "created": "2015-11-27T16:26:19.353Z",
+    "id": "cihhvsk6100s4jnkx4v991bxi",
+    "modified": "2015-11-30T03:19:43.955Z",
+    "owner": "jonahadkins",
+    "draft": false
+}
